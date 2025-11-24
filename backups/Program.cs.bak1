@@ -1,0 +1,60 @@
+using System;
+using WinMapUtils;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Configurar.IPConfig();
+        if (args.Length == 0)
+        {
+            ShowHelp();
+            Console.Read();
+            return;
+        }
+
+        for (int i = 0; i < args.Length; i++)
+        {
+            switch (args[i])
+            {
+                case "-v":
+                case "--version":
+                    Console.WriteLine("MyApp Version 1.0.0");
+                    break;
+                case "-h":
+                case "--help":
+                    ShowHelp();
+                    break;
+                case "-p":
+                    if (i + 1 < args.Length)
+                    {
+                        string port = args[++i];
+                        Console.WriteLine($"Port: {port}");
+                    }
+                    break;
+                case "-ip":
+                    if (i + 1 < args.Length)
+                    {
+                        string ip = args[++i];
+                        Console.WriteLine($"IP: {ip}");
+                    }
+                    break;
+                default:
+                    Console.WriteLine($"Unknown argument: {args[i]}");
+                    ShowHelp();
+                    break;
+            }
+        }
+    }
+
+    static void ShowHelp()
+    {
+        Console.WriteLine("Usage: myapp.exe [OPTIONS]");
+        Console.WriteLine("Options:");
+        Console.WriteLine("  -h, --help     Show help");
+        Console.WriteLine("  -v, --version  Show version");
+        Console.WriteLine("  -p PORT        Set port");
+        Console.WriteLine("  -ip ADDRESS    Set IP address");
+        Console.WriteLine("  -s             Silent mode");
+    }
+}

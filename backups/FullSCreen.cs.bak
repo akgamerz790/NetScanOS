@@ -1,0 +1,29 @@
+using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
+
+
+namespace WinMapUtils
+{
+    [SupportedOSPlatform("windows")]
+    public class FullScreenClass{
+
+    [DllImport("kernel32.dll", ExactSpelling = true)]
+
+    private static extern IntPtr GetConsoleWindow();
+
+    [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+
+    private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+    private const int MAXIMIZE = 3;
+
+    public static void MaximizeConsole()
+        {
+            IntPtr consoleWindow = GetConsoleWindow();
+            Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
+            ShowWindow(consoleWindow, MAXIMIZE);
+        }
+    }
+}
