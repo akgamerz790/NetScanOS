@@ -21,7 +21,7 @@ namespace WinMap
             // await WinMapUtils.WinScan.ScanIP("127.0.0.1");
             for (var s = 0; s < 50; s++)
             {
-                await WinMapUtils.WinScan.ScanIP(_iptotest);
+                await WinMapUtils.WinScan.ScanIP(_iptotest, 69);
                 Console.ReadKey();
             }
         }
@@ -30,8 +30,11 @@ namespace WinMap
             // Console.Read
             Console.Write("[!] Enter IP to check: ");
             string? _ipToCheck = Console.ReadLine();
+            // int? _portToCheck = Console.ReadLine();
+            Console.Write("[!] Enter Port to check: ");
+            int _portToCheck = Convert.ToInt32(Console.ReadLine());
             #pragma warning disable CS8604
-            await WinMapUtils.WinScan.ScanIP(_ipToCheck);
+            await WinMapUtils.WinScan.ScanIP(_ipToCheck, _portToCheck);
             // Console.WriteLine(_ipToCheck);
         }
     }
