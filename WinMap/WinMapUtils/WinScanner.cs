@@ -10,7 +10,7 @@ namespace WinMapUtils
     {
         public async static Task RunScan(string _ip1, int _timeout4)
         {
-            await WinScan.ScanIP(_ip1);
+            await WinScan.ScanIP(_ip1, 6);
         }
     }
 }
