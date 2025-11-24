@@ -7,16 +7,24 @@ namespace WinMapUtils
         public static readonly int _timeout = 1000;
         public async static Task ScanIP(string _ip/*, int _timeout*/)
         {
-            if (_ip == null)
-            {
-                Console.WriteLine("IP not supplied...");
-                Console.ReadKey();
+            try{
+                Ping ping = new();
+                PingReply reply = ping.Send(_ip, 1000);
+                // Console.WriteLine(reply.Status);
+                // Console.WriteLine(ping);
+                if(reply.Status == IPStatus.Success)
+                {
+                    Console.WriteLine("[!] Host " + _ip + " is up..." );
+                }
+                else
+                {
+                    Console.WriteLine("[!] Host " + _ip + " is down..." );
+                }
             }
-            else
+            catch(Exception ex)
             {
-                // using Ping ping = new Ping();
-                using Ping ping = new();
-                PingReply reply = ping.Send(_ip, _timeout);
+                Console.WriteLine(ex);
+                Console.ReadKey();
             }
             
         }

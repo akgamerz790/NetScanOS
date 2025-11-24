@@ -1,5 +1,6 @@
 ﻿using WinMapUtils;
 using System.Runtime.Versioning;
+using System.Threading.Tasks;
 
 namespace WinMap
 {
@@ -8,9 +9,30 @@ namespace WinMap
     {
         public static async Task Main()
         {
-            await Logo.Banner();
-            await WinMapUtils.WinScan.ScanIP("127.0.0.1", 1000);
-            Console.ReadKey();
+            Logo.Banner();
+            Console.WriteLine("\n");
+            await GetScan();
+        }
+
+        public static async Task Miscellaneous()
+        {
+            string _iptotest = "127.0.0.1";
+            // await Logo.Banner();
+            // await WinMapUtils.WinScan.ScanIP("127.0.0.1");
+            for (var s = 0; s < 50; s++)
+            {
+                await WinMapUtils.WinScan.ScanIP(_iptotest);
+                Console.ReadKey();
+            }
+        }
+
+        public static async Task GetScan(){
+            // Console.Read
+            Console.Write("[!] Enter IP to check: ");
+            string? _ipToCheck = Console.ReadLine();
+            #pragma warning disable CS8604
+            await WinMapUtils.WinScan.ScanIP(_ipToCheck);
+            // Console.WriteLine(_ipToCheck);
         }
     }
 }

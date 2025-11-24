@@ -2,16 +2,28 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Text.Unicode;
+using System.Text.Encodings;
+using System.Text.Json;
+using System.Text.RegularExpressions;
 
 namespace WinMapUtils
 {
     public class Logo
     {
-        public async static Task Banner()
+        public static void Banner()
         {
+            string _bannerText = 
+            "██╗    ██╗██╗███╗   ██╗███████╗ ██████╗ █████╗ ███╗   ██╗██╗   ██╗████████╗██╗██╗     ███████╗" + "\n" +
+            "██║    ██║██║████╗  ██║██╔════╝██╔════╝██╔══██╗████╗  ██║██║   ██║╚══██╔══╝██║██║     ██╔════╝" + "\n" +
+            "██║ █╗ ██║██║██╔██╗ ██║███████╗██║     ███████║██╔██╗ ██║██║   ██║   ██║   ██║██║     ███████╗" + "\n" +
+            "██║███╗██║██║██║╚██╗██║╚════██║██║     ██╔══██║██║╚██╗██║██║   ██║   ██║   ██║██║     ╚════██║" + "\n" +
+            "╚███╔███╔╝██║██║ ╚████║███████║╚██████╗██║  ██║██║ ╚████║╚██████╔╝   ██║   ██║███████╗███████║" + "\n" +
+            " ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚═╝╚══════╝╚══════╝";
             
             Console.Clear();
-            Console.WriteLine();
+            Console.WriteLine(_bannerText);
         }
     }
 }
