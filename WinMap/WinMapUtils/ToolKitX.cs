@@ -9,7 +9,7 @@ namespace WinMapUtils
     {
         public static string _text = "[!] Local IP: ";
         public static string _text2 = "[!] Local Gateway IP: ";
-        public static string _filler = "                                            ";
+        public static string _filler = "                                         ";
         public async static Task DisplayToolkit()
         {
             

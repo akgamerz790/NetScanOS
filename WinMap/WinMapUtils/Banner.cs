@@ -10,9 +10,11 @@ using System.Text.RegularExpressions;
 
 namespace WinMapUtils
 {
-    public class Logo
+    public class Banner
     {
-        public static void Banner()
+        string _placeholderText =
+            "══════════════════════════════════════════════════════════════════════════════════════════════";
+        public static void ShowBanner()
         {
             string _bannerText = 
             "██╗    ██╗██╗███╗   ██╗███████╗ ██████╗ █████╗ ███╗   ██╗██╗   ██╗████████╗██╗██╗     ███████╗" + "\n" +
@@ -21,10 +23,13 @@ namespace WinMapUtils
             "██║███╗██║██║██║╚██╗██║╚════██║██║     ██╔══██║██║╚██╗██║██║   ██║   ██║   ██║██║     ╚════██║" + "\n" +
             "╚███╔███╔╝██║██║ ╚████║███████║╚██████╗██║  ██║██║ ╚████║╚██████╔╝   ██║   ██║███████╗███████║" + "\n" +
             " ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚═╝╚══════╝╚══════╝" + "\n" +
-            "[!] NetWork ScannerUtil by @akgamerz_790     ════════════════════    [-]  GitHub: akgamerz790 |" + "\n";
+            "[!] NetWork ScannerUtil by @akgamerz_790     ════════════════════    [-]  GitHub: akgamerz790|" + "\n";
             
+            string _placeholderText =
+            "══════════════════════════════════════════════════════════════════════════════════════════════";
             Console.Clear();
-            Console.WriteLine(_bannerText);
+            Console.Write(_bannerText);
+            Console.Write(_placeholderText);
         }
     }
 }
