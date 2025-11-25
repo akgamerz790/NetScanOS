@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 
 namespace VariableSpace
 {
@@ -111,6 +112,12 @@ namespace VariableSpace
         public static string _NO = "No";
         public static string _TRUE = "True";
         public static string _FALSE = "False";
+
+        // yes no bool
+        public static bool _AFFIRMATIVE = true;
+        public static bool _NEGATIVE = false;
+
+        //usual arrays
         public static string _ALL = "ALL";
         public static string _NONE = "NONE";
         public static string _SUCCESS = "SUCCESS";
@@ -972,6 +979,8 @@ namespace VariableSpace
         public static class ConsoleColorPresets
         {
             // Foreground colors
+
+            
             public static ConsoleColor _BLACK = ConsoleColor.Black;
             public static ConsoleColor _BLUE = ConsoleColor.Blue;
             public static ConsoleColor _CYAN = ConsoleColor.Cyan;
@@ -1035,6 +1044,8 @@ namespace VariableSpace
                 Success
             }
 
+
+
             public static class ColorPreseClass
             {
                 private static readonly Dictionary<ColorPresets, (ConsoleColor FG, ConsoleColor BG)> PresetMap = new()
@@ -1053,6 +1064,45 @@ namespace VariableSpace
                 }
             }
         }
+        
+        public class CustomColors
+        {
+            // #1   CYAN CONSOLE COLOR  [SCANNING, INFO, HEADER COLORS]
+            public ConsoleColor _SCANNING = ConsoleColor.Cyan;
+            public ConsoleColor _INFO = ConsoleColor.Cyan;
+            public ConsoleColor _HEADERS = ConsoleColor.Cyan;
 
+            // #2   GREEN CONSOLE COLOR  [SUCCESS, UP, OPEN]
+            public ConsoleColor _OPEN = ConsoleColor.Green;
+            public ConsoleColor _SUCCESS = ConsoleColor.Green;
+            public ConsoleColor _UP  = ConsoleColor.Green;
+            
+            // #3   [DOWN, CLOSED, ERROR]
+            public ConsoleColor _DOWN = ConsoleColor.Red;
+            public ConsoleColor _CLOSED = ConsoleColor.Red;
+            public ConsoleColor _ERROR = ConsoleColor.Red;
+            
+            // #4   [WARNING, TIMEOUT]
+            public ConsoleColor _WARNING_TIMEOUT = ConsoleColor.Yellow;
+            public ConsoleColor _TIMEOUT = ConsoleColor.Yellow;
+            
+            // #5   [FILTERED]
+            public ConsoleColor _FILTERED = ConsoleColor.Magenta;
+            
+            // #6   [OFFLINE, DISABLED]
+            public ConsoleColor _OFFLINE = ConsoleColor.DarkGray;
+            public ConsoleColor _DISABLED = ConsoleColor.DarkGray;
+            
+            // #7   [UNREACHABLE]
+            public ConsoleColor UNREACHABLE = ConsoleColor.DarkGray;
+
+            // #8   [CRITICAL WARNING]
+
+            // #9   [CRITICAL ERRORS]    
+
+            // #10  [WARNINGS]
+
+            //#11   [SECTION HEADERS]
+        }
     }
 }

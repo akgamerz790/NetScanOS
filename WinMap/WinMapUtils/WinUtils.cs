@@ -9,6 +9,25 @@ namespace WinMapUtils
     public class WinUtils
     {
 
+        public static void WriteColored(string _text4, bool _appendNewLine75, ConsoleColor? FGconsoleColor77, ConsoleColor? BGconsoleColor72)
+        {
+            if (FGconsoleColor77.HasValue){
+                Console.ForegroundColor = FGconsoleColor77.Value;
+            }
+            if (BGconsoleColor72.HasValue){
+                Console.BackgroundColor = BGconsoleColor72.Value;
+            }
+            if(!_appendNewLine75){
+                Console.Write(_text4);
+            }
+            else
+            {
+                Console.WriteLine(_text4);
+            }
+            Console.ResetColor();
+        }
+
+
         public static void LineBreak()
         {
             // Console.WriteLine("Local IP: " + GetLocalIPAddress());
