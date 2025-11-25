@@ -1,6 +1,7 @@
 ﻿using WinMapUtils;
 using System.Runtime.Versioning;
 using System.Threading.Tasks;
+using VariableSpace;
 
 namespace WinMap
 {
@@ -9,8 +10,10 @@ namespace WinMap
     {
         public static async Task Main()
         {
-            Logo.Banner();
-            Console.WriteLine("\n");
+            Console.WriteLine(FallBackVars._IS_LINUX);
+            Banner.ShowBanner();
+            // Console.WriteLine("\n");
+            await ToolKitX.DisplayToolkit();
             await GetScan();
         }
 
@@ -36,6 +39,7 @@ namespace WinMap
             #pragma warning disable CS8604
             await WinMapUtils.WinScan.ScanIP(_ipToCheck, _portToCheck);
             // Console.WriteLine(_ipToCheck);
+            await GetScan();
         }
     }
 }
