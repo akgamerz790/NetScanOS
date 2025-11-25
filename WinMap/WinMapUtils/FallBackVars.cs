@@ -436,5 +436,598 @@ namespace VariableSpace
         // Unique Project Vectors
         public static string _COREOSLABS_MAIN = "CoreOS Labs";
         public static string _MY_GITHUB_PROFILE = "https://github.com/akgamerz790";
+
+        public class ScanTypes
+        {
+            // HOST DISCOVERY SCANS
+            public static string _PING_SWEEP = "Ping Sweep";
+            public static string _ARP_SCAN = "ARP Scan";
+            public static string _TCP_SYN_PING = "TCP SYN Ping";
+            public static string _TCP_ACK_PING = "TCP ACK Ping";
+            public static string _UDP_PING = "UDP Ping";
+            public static string _ICMP_TIMESTAMP = "ICMP Timestamp";
+            public static string _ICMP_ADDRESS_MASK = "ICMP Address Mask";
+            public static string _IP_PROTOCOL_PING = "IP Protocol Ping";
+
+            // PORT SCANNING TECHNIQUES
+            public static string _TCP_CONNECT_SCAN = "TCP Connect Scan";
+            public static string _TCP_SYN_SCAN = "TCP SYN Scan";
+            public static string _TCP_FIN_SCAN = "TCP FIN Scan";
+            public static string _TCP_NULL_SCAN = "TCP NULL Scan";
+            public static string _TCP_XMAS_SCAN = "TCP XMAS Scan";
+            public static string _TCP_ACK_SCAN = "TCP ACK Scan";
+            public static string _TCP_WINDOW_SCAN = "TCP Window Scan";
+            public static string _TCP_MAIMON_SCAN = "TCP Maimon Scan";
+            public static string _UDP_SCAN = "UDP Scan";
+            public static string _SCTP_INIT_SCAN = "SCTP INIT Scan";
+
+            // SERVICE & VERSION DETECTION
+            public static string _VERSION_DETECTION = "Version Detection";
+            public static string _RPC_SCAN = "RPC Scan";
+            public static string _SSL_TLS_SCAN = "SSL/TLS Scan";
+
+            // OS DETECTION
+            public static string _TCPIP_FINGERPRINTING = "TCP/IP Stack Fingerprinting";
+            public static string _IDLE_SCAN = "Idle Scan";
+
+            // NETWORK MAPPING
+            public static string _TRACEROUTE = "Traceroute";
+            public static string _TOPOLOGY_DISCOVERY = "Topology Discovery";
+
+            // VULNERABILITY SCANS
+            public static string _SCRIPT_SCANNING = "Script Scanning";
+            public static string _VULN_SCAN = "Vulnerability Scan";
+            public static string _EXPLOIT_SCAN = "Exploit Scan";
+
+            // SPECIALIZED SCANS
+            public static string _FTP_BOUNCE_SCAN = "FTP Bounce Scan";
+            public static string _HTTP_SERVICE_SCAN = "HTTP Service Scan";
+            public static string _SMB_SCAN = "SMB Scan";
+            public static string _SNMP_SCAN = "SNMP Scan";
+            public static string _DNS_ENUMERATION = "DNS Enumeration";
+            public static string _SMTP_USER_ENUMERATION = "SMTP User Enumeration";
+
+            // WIRELESS SCANS
+            public static string _WIFI_NETWORK_SCAN = "WiFi Network Scan";
+            public static string _BLUETOOTH_SCAN = "Bluetooth Scan";
+
+            // WEB APPLICATION SCANS
+            public static string _HTTP_METHOD_SCAN = "HTTP Method Scan";
+            public static string _DIRECTORY_BRUTEFORCE = "Directory Bruteforce";
+            public static string _SUBDOMAIN_ENUMERATION = "Subdomain Enumeration";
+
+            // DATABASE SCANS
+            public static string _SQL_SERVER_SCAN = "SQL Server Scan";
+            public static string _NOSQL_SCAN = "NoSQL Scan";
+
+            // COMMON SCAN PROFILES
+            public static string _BASIC_NETWORK_SCAN = "Basic Network Scan";
+            public static string _COMPREHENSIVE_AUDIT = "Comprehensive Audit";
+            public static string _STEALTH_SCAN = "Stealth Scan";
+            public static string _QUICK_SCAN = "Quick Scan";
+            public static string _FULL_PORT_SCAN = "Full Port Scan";
+            public static string _WEB_INFRASTRUCTURE_SCAN = "Web Infrastructure Scan";
+            public static string _UDP_SERVICE_SCAN = "UDP Service Scan";
+            public static string _OS_FINGERPRINTING_SCAN = "OS Fingerprinting Scan";
+        }
+
+        public class ConsoleHelper
+        {
+            // BASIC COLORS
+            public static string _BLACK = "Black";
+            public static string _BLUE = "Blue";
+            public static string _CYAN = "Cyan";
+            public static string _DARKBLUE = "DarkBlue";
+            public static string _DARKCYAN = "DarkCyan";
+            public static string _DARKGRAY = "DarkGray";
+            public static string _DARKGREEN = "DarkGreen";
+            public static string _DARKMAGENTA = "DarkMagenta";
+            public static string _DARKRED = "DarkRed";
+            public static string _DARKYELLOW = "DarkYellow";
+            public static string _GRAY = "Gray";
+            public static string _GREEN = "Green";
+            public static string _MAGENTA = "Magenta";
+            public static string _RED = "Red";
+            public static string _WHITE = "White";
+            public static string _YELLOW = "Yellow";
+
+            // FOREGROUND COLOR CODES
+            public static string _FG_BLACK = "\u001b[30m";
+            public static string _FG_RED = "\u001b[31m";
+            public static string _FG_GREEN = "\u001b[32m";
+            public static string _FG_YELLOW = "\u001b[33m";
+            public static string _FG_BLUE = "\u001b[34m";
+            public static string _FG_MAGENTA = "\u001b[35m";
+            public static string _FG_CYAN = "\u001b[36m";
+            public static string _FG_WHITE = "\u001b[37m";
+            public static string _FG_BRIGHT_BLACK = "\u001b[90m";
+            public static string _FG_BRIGHT_RED = "\u001b[91m";
+            public static string _FG_BRIGHT_GREEN = "\u001b[92m";
+            public static string _FG_BRIGHT_YELLOW = "\u001b[93m";
+            public static string _FG_BRIGHT_BLUE = "\u001b[94m";
+            public static string _FG_BRIGHT_MAGENTA = "\u001b[95m";
+            public static string _FG_BRIGHT_CYAN = "\u001b[96m";
+            public static string _FG_BRIGHT_WHITE = "\u001b[97m";
+            public static string _FG_DARKGRAY = "\033[90m";
+
+            // BACKGROUND COLOR CODES
+            public static string _BG_BLACK = "\u001b[40m";
+            public static string _BG_RED = "\u001b[41m";
+            public static string _BG_GREEN = "\u001b[42m";
+            public static string _BG_YELLOW = "\u001b[43m";
+            public static string _BG_BLUE = "\u001b[44m";
+            public static string _BG_MAGENTA = "\u001b[45m";
+            public static string _BG_CYAN = "\u001b[46m";
+            public static string _BG_WHITE = "\u001b[47m";
+            public static string _BG_BRIGHT_BLACK = "\u001b[100m";
+            public static string _BG_BRIGHT_RED = "\u001b[101m";
+            public static string _BG_BRIGHT_GREEN = "\u001b[102m";
+            public static string _BG_BRIGHT_YELLOW = "\u001b[103m";
+            public static string _BG_BRIGHT_BLUE = "\u001b[104m";
+            public static string _BG_BRIGHT_MAGENTA = "\u001b[105m";
+            public static string _BG_BRIGHT_CYAN = "\u001b[106m";
+            public static string _BG_BRIGHT_WHITE = "\u001b[107m";
+
+            // TEXT STYLES
+            public static string _RESET = "\u001b[0m";
+            public static string _BOLD = "\u001b[1m";
+            public static string _DIM = "\u001b[2m";
+            public static string _ITALIC = "\u001b[3m";
+            public static string _UNDERLINE = "\u001b[4m";
+            public static string _BLINK = "\u001b[5m";
+            public static string _REVERSE = "\u001b[7m";
+            public static string _HIDDEN = "\u001b[8m";
+            public static string _STRIKETHROUGH = "\u001b[9m";
+
+            // CUSTOM COLOR THEMES
+            public static string _SUCCESS_COLOR = _FG_GREEN;
+            public static string _ERROR_COLOR = _FG_RED;
+            public static string _WARNING_COLOR = _FG_YELLOW;
+            public static string _INFO_COLOR = _FG_CYAN;
+            public static string _DEBUG_COLOR = _FG_MAGENTA;
+            public static string _HIGHLIGHT_COLOR = _FG_BRIGHT_YELLOW;
+            public static string _ACCENT_COLOR = _FG_BRIGHT_CYAN;
+            public static string _MUTED_COLOR = _FG_DARKGRAY;
+
+            // STATUS COLORS
+            public static string _STATUS_SUCCESS = _FG_BRIGHT_GREEN;
+            public static string _STATUS_ERROR = _FG_BRIGHT_RED;
+            public static string _STATUS_WARNING = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_INFO = _FG_BRIGHT_CYAN;
+            public static string _STATUS_DEBUG = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_NEUTRAL = _FG_WHITE;
+            public static string _STATUS_ACTIVE = _FG_BRIGHT_GREEN;
+            public static string _STATUS_INACTIVE = _FG_DARKGRAY;
+            public static string _STATUS_PENDING = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_COMPLETED = _FG_GREEN;
+            public static string _STATUS_FAILED = _FG_RED;
+            public static string _STATUS_RUNNING = _FG_BRIGHT_BLUE;
+            public static string _STATUS_STOPPED = _FG_RED;
+            public static string _STATUS_PAUSED = _FG_YELLOW;
+            public static string _STATUS_QUEUED = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_CANCELLED = _FG_DARKGRAY;
+            public static string _STATUS_UNKNOWN = _FG_DARKGRAY;
+            public static string _STATUS_CRITICAL = _FG_BRIGHT_RED;
+            public static string _STATUS_MAJOR = _FG_RED;
+            public static string _STATUS_MINOR = _FG_YELLOW;
+            public static string _STATUS_NORMAL = _FG_GREEN;
+            public static string _STATUS_OPTIMAL = _FG_BRIGHT_GREEN;
+            public static string _STATUS_GOOD = _FG_GREEN;
+            public static string _STATUS_FAIR = _FG_YELLOW;
+            public static string _STATUS_POOR = _FG_RED;
+            public static string _STATUS_HIGH = _FG_RED;
+            public static string _STATUS_MEDIUM = _FG_YELLOW;
+            public static string _STATUS_LOW = _FG_GREEN;
+            public static string _STATUS_NONE = _FG_DARKGRAY;
+            public static string _STATUS_FULL = _FG_BRIGHT_GREEN;
+            public static string _STATUS_PARTIAL = _FG_YELLOW;
+            public static string _STATUS_EMPTY = _FG_RED;
+            public static string _STATUS_CONNECTED = _FG_BRIGHT_GREEN;
+            public static string _STATUS_DISCONNECTED = _FG_RED;
+            public static string _STATUS_CONNECTING = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_AUTHENTICATED = _FG_BRIGHT_GREEN;
+            public static string _STATUS_UNAUTHENTICATED = _FG_RED;
+            public static string _STATUS_AUTHORIZED = _FG_GREEN;
+            public static string _STATUS_UNAUTHORIZED = _FG_RED;
+            public static string _STATUS_VALID = _FG_GREEN;
+            public static string _STATUS_INVALID = _FG_RED;
+            public static string _STATUS_VERIFIED = _FG_BRIGHT_GREEN;
+            public static string _STATUS_UNVERIFIED = _FG_YELLOW;
+            public static string _STATUS_TRUSTED = _FG_GREEN;
+            public static string _STATUS_UNTRUSTED = _FG_RED;
+            public static string _STATUS_SECURE = _FG_BRIGHT_GREEN;
+            public static string _STATUS_INSECURE = _FG_RED;
+            public static string _STATUS_ENCRYPTED = _FG_GREEN;
+            public static string _STATUS_UNENCRYPTED = _FG_RED;
+            public static string _STATUS_COMPATIBLE = _FG_GREEN;
+            public static string _STATUS_INCOMPATIBLE = _FG_RED;
+            public static string _STATUS_SUPPORTED = _FG_GREEN;
+            public static string _STATUS_UNSUPPORTED = _FG_RED;
+            public static string _STATUS_AVAILABLE = _FG_BRIGHT_GREEN;
+            public static string _STATUS_UNAVAILABLE = _FG_RED;
+            public static string _STATUS_ONLINE = _FG_BRIGHT_GREEN;
+            public static string _STATUS_OFFLINE = _FG_RED;
+            public static string _STATUS_REACHABLE = _FG_GREEN;
+            public static string _STATUS_UNREACHABLE = _FG_RED;
+            public static string _STATUS_RESPONSIVE = _FG_BRIGHT_GREEN;
+            public static string _STATUS_UNRESPONSIVE = _FG_RED;
+            public static string _STATUS_HEALTHY = _FG_BRIGHT_GREEN;
+            public static string _STATUS_UNHEALTHY = _FG_RED;
+            public static string _STATUS_STABLE = _FG_GREEN;
+            public static string _STATUS_UNSTABLE = _FG_RED;
+            public static string _STATUS_OPTIMIZED = _FG_BRIGHT_GREEN;
+            public static string _STATUS_SUBOPTIMAL = _FG_YELLOW;
+            public static string _STATUS_EFFICIENT = _FG_GREEN;
+            public static string _STATUS_INEFFICIENT = _FG_RED;
+            public static string _STATUS_PERFORMANT = _FG_BRIGHT_GREEN;
+            public static string _STATUS_SLOW = _FG_RED;
+            public static string _STATUS_FAST = _FG_BRIGHT_GREEN;
+            public static string _STATUS_UP_TO_DATE = _FG_GREEN;
+            public static string _STATUS_OUTDATED = _FG_RED;
+            public static string _STATUS_CURRENT = _FG_GREEN;
+            public static string _STATUS_DEPRECATED = _FG_YELLOW;
+            public static string _STATUS_MODERN = _FG_BRIGHT_GREEN;
+            public static string _STATUS_LEGACY = _FG_DARKGRAY;
+            public static string _STATUS_STANDARD = _FG_GREEN;
+            public static string _STATUS_NONSTANDARD = _FG_YELLOW;
+            public static string _STATUS_COMPLIANT = _FG_GREEN;
+            public static string _STATUS_NONCOMPLIANT = _FG_RED;
+            public static string _STATUS_CERTIFIED = _FG_BRIGHT_GREEN;
+            public static string _STATUS_UNCERTIFIED = _FG_YELLOW;
+            public static string _STATUS_LICENSED = _FG_GREEN;
+            public static string _STATUS_UNLICENSED = _FG_RED;
+            public static string _STATUS_ACTIVATED = _FG_BRIGHT_GREEN;
+            public static string _STATUS_DEACTIVATED = _FG_RED;
+            public static string _STATUS_ENABLED = _FG_GREEN;
+            public static string _STATUS_DISABLED = _FG_RED;
+            public static string _STATUS_ALLOWED = _FG_GREEN;
+            public static string _STATUS_DENIED = _FG_RED;
+            public static string _STATUS_PERMITTED = _FG_GREEN;
+            public static string _STATUS_FORBIDDEN = _FG_RED;
+            public static string _STATUS_GRANTED = _FG_BRIGHT_GREEN;
+            public static string _STATUS_REVOKED = _FG_RED;
+            public static string _STATUS_APPROVED = _FG_GREEN;
+            public static string _STATUS_REJECTED = _FG_RED;
+            public static string _STATUS_ACCEPTED = _FG_BRIGHT_GREEN;
+            public static string _STATUS_DECLINED = _FG_RED;
+            public static string _STATUS_CONFIRMED = _FG_GREEN;
+            public static string _STATUS_UNCONFIRMED = _FG_YELLOW;
+            public static string _STATUS_VERIFIED_USER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_UNVERIFIED_USER = _FG_YELLOW;
+            public static string _STATUS_PREMIUM_USER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_BASIC_USER = _FG_WHITE;
+            public static string _STATUS_ADMIN_USER = _FG_BRIGHT_RED;
+            public static string _STATUS_MODERATOR_USER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_REGULAR_USER = _FG_GREEN;
+            public static string _STATUS_GUEST_USER = _FG_DARKGRAY;
+            public static string _STATUS_BANNED_USER = _FG_RED;
+            public static string _STATUS_SUSPENDED_USER = _FG_YELLOW;
+            public static string _STATUS_ACTIVE_USER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_INACTIVE_USER = _FG_DARKGRAY;
+            public static string _STATUS_NEW_USER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_EXISTING_USER = _FG_WHITE;
+            public static string _STATUS_RETURNING_USER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_FIRST_TIME_USER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_VIP_USER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_STAFF_USER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_DEVELOPER_USER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_TESTER_USER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_SUPPORT_USER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_SALES_USER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_MARKETING_USER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_HR_USER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_FINANCE_USER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_LEGAL_USER = _FG_BRIGHT_RED;
+            public static string _STATUS_IT_USER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_OPS_USER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_SECURITY_USER = _FG_BRIGHT_RED;
+            public static string _STATUS_AUDIT_USER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_COMPLIANCE_USER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_PRIVACY_USER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_RISK_USER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_GOVERNANCE_USER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_STRATEGY_USER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_PLANNING_USER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_ANALYTICS_USER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_RESEARCH_USER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_DEVELOPMENT_USER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_PRODUCTION_USER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_TESTING_USER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_STAGING_USER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_SANDBOX_USER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_DEMO_USER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_TRIAL_USER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_PAID_USER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_FREE_USER = _FG_WHITE;
+            public static string _STATUS_FREEMIUM_USER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_PREMIUM_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_BASIC_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_EXPIRED_SUBSCRIBER = _FG_RED;
+            public static string _STATUS_ACTIVE_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_CANCELLED_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_PENDING_SUBSCRIBER = _FG_YELLOW;
+            public static string _STATUS_GRACE_PERIOD_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_SUSPENDED_SUBSCRIBER = _FG_RED;
+            public static string _STATUS_DELINQUENT_SUBSCRIBER = _FG_BRIGHT_RED;
+            public static string _STATUS_IN_COLLECTIONS_SUBSCRIBER = _FG_RED;
+            public static string _STATUS_CHURNED_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_REACTIVATED_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_LOYAL_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_NEW_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_EXISTING_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_RETURNING_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_AT_RISK_SUBSCRIBER = _FG_YELLOW;
+            public static string _STATUS_SAFE_SUBSCRIBER = _FG_GREEN;
+            public static string _STATUS_VIP_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_ENTERPRISE_SUBSCRIBER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_BUSINESS_SUBSCRIBER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_PRO_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_PERSONAL_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_FAMILY_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_STUDENT_SUBSCRIBER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_EDUCATOR_SUBSCRIBER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_NONPROFIT_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_GOVERNMENT_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_MILITARY_SUBSCRIBER = _FG_BRIGHT_RED;
+            public static string _STATUS_SENIOR_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_YOUTH_SUBSCRIBER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_DISABLED_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_LOW_INCOME_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_AFFILIATE_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_PARTNER_SUBSCRIBER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_RESELLER_SUBSCRIBER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_DISTRIBUTOR_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_WHOLESALER_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_RETAILER_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_CUSTOMER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_CLIENT_SUBSCRIBER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_CONSUMER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_END_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_POWER_USER_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_CASUAL_USER_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_OCCASIONAL_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_FREQUENT_USER_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_HEAVY_USER_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_LIGHT_USER_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_MODERATE_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_EXTREME_USER_SUBSCRIBER = _FG_BRIGHT_RED;
+            public static string _STATUS_AVERAGE_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_TYPICAL_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_STANDARD_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_BASIC_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_ADVANCED_USER_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_EXPERT_USER_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_PROFESSIONAL_USER_SUBSCRIBER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_MASTER_USER_SUBSCRIBER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_GURU_USER_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_NINJA_USER_SUBSCRIBER = _FG_BRIGHT_RED;
+            public static string _STATUS_ROCKSTAR_USER_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_CHAMPION_USER_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_LEGEND_USER_SUBSCRIBER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_ICON_USER_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_HERO_USER_SUBSCRIBER = _FG_BRIGHT_RED;
+            public static string _STATUS_SUPER_USER_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_ULTIMATE_USER_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_PREMIUM_PLUS_USER_SUBSCRIBER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_DIAMOND_USER_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_PLATINUM_USER_SUBSCRIBER = _FG_BRIGHT_WHITE;
+            public static string _STATUS_GOLD_USER_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_SILVER_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_BRONZE_USER_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_COPPER_USER_SUBSCRIBER = _FG_RED;
+            public static string _STATUS_STEEL_USER_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_IRON_USER_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_WOOD_USER_SUBSCRIBER = _FG_YELLOW;
+            public static string _STATUS_STONE_USER_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_PAPER_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_ROCK_USER_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_SCISSORS_USER_SUBSCRIBER = _FG_WHITE;
+            public static string _STATUS_FIRE_USER_SUBSCRIBER = _FG_BRIGHT_RED;
+            public static string _STATUS_WATER_USER_SUBSCRIBER = _FG_BRIGHT_BLUE;
+            public static string _STATUS_EARTH_USER_SUBSCRIBER = _FG_GREEN;
+            public static string _STATUS_AIR_USER_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_LIGHTNING_USER_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_ICE_USER_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_POISON_USER_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_PSYCHIC_USER_SUBSCRIBER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_GHOST_USER_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_DRAGON_USER_SUBSCRIBER = _FG_BRIGHT_RED;
+            public static string _STATUS_DARK_USER_SUBSCRIBER = _FG_DARKGRAY;
+            public static string _STATUS_FAIRY_USER_SUBSCRIBER = _FG_BRIGHT_MAGENTA;
+            public static string _STATUS_FIGHTING_USER_SUBSCRIBER = _FG_RED;
+            public static string _STATUS_FLYING_USER_SUBSCRIBER = _FG_BRIGHT_CYAN;
+            public static string _STATUS_GRASS_USER_SUBSCRIBER = _FG_GREEN;
+            public static string _STATUS_GROUND_USER_SUBSCRIBER = _FG_YELLOW;
+            public static string _STATUS_BUG_USER_SUBSCRIBER = _FG_BRIGHT_GREEN;
+            public static string _STATUS_ELECTRIC_USER_SUBSCRIBER = _FG_BRIGHT_YELLOW;
+            public static string _STATUS_NORMAL_USER_SUBSCRIBER = _FG_WHITE;
+            // public static string _STATUS_ROCK_USER_SUBSCRIBER = _FG_DARKGRAY;
+            // public static string _STATUS_STEEL_USER_SUBSCRIBER = _FG_DARKGRAY;
+
+            // LOG LEVEL COLORS
+            public static string _LOG_EMERGENCY = _FG_BRIGHT_RED;
+            public static string _LOG_ALERT = _FG_BRIGHT_RED;
+            public static string _LOG_CRITICAL = _FG_RED;
+            public static string _LOG_ERROR = _FG_RED;
+            public static string _LOG_WARNING = _FG_YELLOW;
+            public static string _LOG_NOTICE = _FG_BRIGHT_YELLOW;
+            public static string _LOG_INFO = _FG_CYAN;
+            public static string _LOG_DEBUG = _FG_MAGENTA;
+            public static string _LOG_TRACE = _FG_DARKGRAY;
+            public static string _LOG_VERBOSE = _FG_DARKGRAY;
+            public static string _LOG_SILLY = _FG_DARKGRAY;
+            public static string _LOG_FATAL = _FG_BRIGHT_RED;
+            public static string _LOG_SEVERE = _FG_RED;
+            public static string _LOG_IMPORTANT = _FG_BRIGHT_YELLOW;
+            public static string _LOG_MINOR = _FG_WHITE;
+            public static string _LOG_ROUTINE = _FG_DARKGRAY;
+            public static string _LOG_BACKGROUND = _FG_DARKGRAY;
+            public static string _LOG_FOREGROUND = _FG_WHITE;
+            public static string _LOG_INTERACTIVE = _FG_BRIGHT_CYAN;
+            public static string _LOG_AUTOMATED = _FG_DARKGRAY;
+            public static string _LOG_MANUAL = _FG_WHITE;
+            public static string _LOG_SCHEDULED = _FG_BRIGHT_BLUE;
+            public static string _LOG_ON_DEMAND = _FG_BRIGHT_GREEN;
+            public static string _LOG_REALTIME = _FG_BRIGHT_CYAN;
+            public static string _LOG_BATCH = _FG_DARKGRAY;
+            public static string _LOG_STREAMING = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_EVENT_DRIVEN = _FG_BRIGHT_YELLOW;
+            public static string _LOG_POLLING = _FG_WHITE;
+            public static string _LOG_WEBHOOK = _FG_BRIGHT_GREEN;
+            public static string _LOG_API_CALL = _FG_BRIGHT_BLUE;
+            public static string _LOG_DATABASE = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_NETWORK = _FG_BRIGHT_CYAN;
+            public static string _LOG_SECURITY = _FG_BRIGHT_RED;
+            public static string _LOG_PERFORMANCE = _FG_BRIGHT_YELLOW;
+            public static string _LOG_AVAILABILITY = _FG_BRIGHT_GREEN;
+            public static string _LOG_RELIABILITY = _FG_GREEN;
+            public static string _LOG_SCALABILITY = _FG_BRIGHT_BLUE;
+            public static string _LOG_MAINTAINABILITY = _FG_BRIGHT_CYAN;
+            public static string _LOG_USABILITY = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_ACCESSIBILITY = _FG_BRIGHT_GREEN;
+            public static string _LOG_COMPATIBILITY = _FG_BRIGHT_YELLOW;
+            public static string _LOG_PORTABILITY = _FG_BRIGHT_BLUE;
+            public static string _LOG_TESTABILITY = _FG_BRIGHT_CYAN;
+            public static string _LOG_DEPLOYABILITY = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_OBSERVABILITY = _FG_BRIGHT_GREEN;
+            public static string _LOG_DEBUGGABILITY = _FG_BRIGHT_YELLOW;
+            public static string _LOG_PROFILABILITY = _FG_BRIGHT_BLUE;
+            public static string _LOG_MONITORABILITY = _FG_BRIGHT_CYAN;
+            public static string _LOG_MANAGEABILITY = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_OPERABILITY = _FG_BRIGHT_GREEN;
+            public static string _LOG_SUPPORTABILITY = _FG_BRIGHT_YELLOW;
+            public static string _LOG_EXTENSIBILITY = _FG_BRIGHT_BLUE;
+            public static string _LOG_CUSTOMIZABILITY = _FG_BRIGHT_CYAN;
+            public static string _LOG_CONFIGURABILITY = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_INTEGRABILITY = _FG_BRIGHT_GREEN;
+            public static string _LOG_INTEROPERABILITY = _FG_BRIGHT_YELLOW;
+            public static string _LOG_CONNECTIVITY = _FG_BRIGHT_BLUE;
+            public static string _LOG_COMMUNICABILITY = _FG_BRIGHT_CYAN;
+            public static string _LOG_COLLABORABILITY = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_SHAREABILITY = _FG_BRIGHT_GREEN;
+            public static string _LOG_DISCOVERABILITY = _FG_BRIGHT_YELLOW;
+            public static string _LOG_FINDABILITY = _FG_BRIGHT_BLUE;
+            public static string _LOG_SEARCHABILITY = _FG_BRIGHT_CYAN;
+            public static string _LOG_NAVIGABILITY = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_BROWSABILITY = _FG_BRIGHT_GREEN;
+            public static string _LOG_SCANNABILITY = _FG_BRIGHT_YELLOW;
+            public static string _LOG_READABILITY = _FG_BRIGHT_BLUE;
+            public static string _LOG_WRITABILITY = _FG_BRIGHT_CYAN;
+            public static string _LOG_EDITABILITY = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_MODIFIABILITY = _FG_BRIGHT_GREEN;
+            public static string _LOG_ADAPTABILITY = _FG_BRIGHT_YELLOW;
+            public static string _LOG_FLEXIBILITY = _FG_BRIGHT_BLUE;
+            public static string _LOG_AGILITY = _FG_BRIGHT_CYAN;
+            public static string _LOG_RESILIENCE = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_ROBUSTNESS = _FG_BRIGHT_GREEN;
+            public static string _LOG_REDUNDANCY = _FG_BRIGHT_YELLOW;
+            public static string _LOG_FAULT_TOLERANCE = _FG_BRIGHT_BLUE;
+            public static string _LOG_DISASTER_RECOVERY = _FG_BRIGHT_CYAN;
+            public static string _LOG_BACKUP = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_RESTORE = _FG_BRIGHT_GREEN;
+            public static string _LOG_SNAPSHOT = _FG_BRIGHT_YELLOW;
+            public static string _LOG_CLONE = _FG_BRIGHT_BLUE;
+            public static string _LOG_MIRROR = _FG_BRIGHT_CYAN;
+            public static string _LOG_REPLICA = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_SHADOW = _FG_DARKGRAY;
+            public static string _LOG_GHOST = _FG_DARKGRAY;
+            public static string _LOG_ZOMBIE = _FG_RED;
+            public static string _LOG_VAMPIRE = _FG_BRIGHT_RED;
+            public static string _LOG_WEREWOLF = _FG_YELLOW;
+            public static string _LOG_DRACULA = _FG_RED;
+            public static string _LOG_FRANKENSTEIN = _FG_GREEN;
+            public static string _LOG_MUMMY = _FG_YELLOW;
+            public static string _LOG_PHANTOM = _FG_DARKGRAY;
+            public static string _LOG_SPECTER = _FG_DARKGRAY;
+            public static string _LOG_WRAITH = _FG_DARKGRAY;
+            public static string _LOG_BANSHEE = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_GHOUL = _FG_GREEN;
+            public static string _LOG_DEMON = _FG_RED;
+            public static string _LOG_ANGEL = _FG_BRIGHT_WHITE;
+            public static string _LOG_ARCHANGEL = _FG_BRIGHT_CYAN;
+            public static string _LOG_CHERUB = _FG_BRIGHT_YELLOW;
+            public static string _LOG_SERAPH = _FG_BRIGHT_RED;
+            public static string _LOG_DEMIGOD = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_TITAN = _FG_BRIGHT_BLUE;
+            public static string _LOG_GIANT = _FG_BRIGHT_GREEN;
+            public static string _LOG_DWARF = _FG_YELLOW;
+            public static string _LOG_ELF = _FG_BRIGHT_GREEN;
+            public static string _LOG_FAIRY = _FG_BRIGHT_MAGENTA;
+            public static string _LOG_GNOME = _FG_GREEN;
+            public static string _LOG_GOBLIN = _FG_BRIGHT_GREEN;
+            public static string _LOG_HOBGOBLIN = _FG_GREEN;
+            public static string _LOG_IMP = _FG_BRIGHT_RED;
+            public static string _LOG_KOBOLD = _FG_YELLOW;
+            public static string _LOG_LEPRECHAUN = _FG_BRIGHT_GREEN;
+            public static string _LOG_ORC = _FG_GREEN;
+            public static string _LOG_TROLL = _FG_DARKGRAY;
+            public static string _LOG_OGRE = _FG_YELLOW;
+            public static string _LOG_CYCLOPS = _FG_WHITE;
+            public static string _LOG_MINOTAUR = _FG_RED;
+            public static string _LOG_CENTAUR = _FG_YELLOW;
+            public static string _LOG_SATYR = _FG_GREEN;
+            public static string _LOG_FAUN = _FG_BRIGHT_GREEN;
+            public static string _LOG_DRYAD = _FG_BLACK;
+        }
+        public static class ConsoleColorPresets
+        {
+            // Foreground colors
+            public static ConsoleColor _BLACK = ConsoleColor.Black;
+            public static ConsoleColor _BLUE = ConsoleColor.Blue;
+            public static ConsoleColor _CYAN = ConsoleColor.Cyan;
+            public static ConsoleColor _DARKBLUE = ConsoleColor.DarkBlue;
+            public static ConsoleColor _DARKCYAN = ConsoleColor.DarkCyan;
+            public static ConsoleColor _DARKGRAY = ConsoleColor.DarkGray;
+            public static ConsoleColor _DARKGREEN = ConsoleColor.DarkGreen;
+            public static ConsoleColor _DARKMAGENTA = ConsoleColor.DarkMagenta;
+            public static ConsoleColor _DARKRED = ConsoleColor.DarkRed;
+            public static ConsoleColor _DARKYELLOW = ConsoleColor.DarkYellow;
+            public static ConsoleColor _GRAY = ConsoleColor.Gray;
+            public static ConsoleColor _GREEN = ConsoleColor.Green;
+            public static ConsoleColor _MAGENTA = ConsoleColor.Magenta;
+            public static ConsoleColor _RED = ConsoleColor.Red;
+            public static ConsoleColor _WHITE = ConsoleColor.White;
+            public static ConsoleColor _YELLOW = ConsoleColor.Yellow;
+
+            // Background colors
+            public static ConsoleColor _BG_BLACK = ConsoleColor.Black;
+            public static ConsoleColor _BG_BLUE = ConsoleColor.Blue;
+            public static ConsoleColor _BG_CYAN = ConsoleColor.Cyan;
+            public static ConsoleColor _BG_DARKBLUE = ConsoleColor.DarkBlue;
+            public static ConsoleColor _BG_DARKCYAN = ConsoleColor.DarkCyan;
+            public static ConsoleColor _BG_DARKGRAY = ConsoleColor.DarkGray;
+            public static ConsoleColor _BG_DARKGREEN = ConsoleColor.DarkGreen;
+            public static ConsoleColor _BG_DARKMAGENTA = ConsoleColor.DarkMagenta;
+            public static ConsoleColor _BG_DARKRED = ConsoleColor.DarkRed;
+            public static ConsoleColor _BG_DARKYELLOW = ConsoleColor.DarkYellow;
+            public static ConsoleColor _BG_GRAY = ConsoleColor.Gray;
+            public static ConsoleColor _BG_GREEN = ConsoleColor.Green;
+            public static ConsoleColor _BG_MAGENTA = ConsoleColor.Magenta;
+            public static ConsoleColor _BG_RED = ConsoleColor.Red;
+            public static ConsoleColor _BG_WHITE = ConsoleColor.White;
+            public static ConsoleColor _BG_YELLOW = ConsoleColor.Yellow;
+
+            // Example combined presets (Foreground, Background)
+            public static (ConsoleColor FG, ConsoleColor BG) _PRESET_ERROR = (ConsoleColor.White, ConsoleColor.Red);
+            public static (ConsoleColor FG, ConsoleColor BG) _PRESET_WARNING = (ConsoleColor.Black, ConsoleColor.Yellow);
+            public static (ConsoleColor FG, ConsoleColor BG) _PRESET_INFO = (ConsoleColor.White, ConsoleColor.Blue);
+            public static (ConsoleColor FG, ConsoleColor BG) _PRESET_SUCCESS = (ConsoleColor.Black, ConsoleColor.Green);
+
+            // Additional variables can be added here to reach 500+ total presets and variants
+            // For example, lighter/darker shades, blinking flags, or numeric codes
+
+            // Usage example method to set console colors
+            public static void ApplyPreset((ConsoleColor FG, ConsoleColor BG) preset)
+            {
+                Console.ForegroundColor = preset.FG;
+                Console.BackgroundColor = preset.BG;
+            }
+
+            public static void ThisPreset()
+            {
+                
+            }
+        }
+
     }
 }
