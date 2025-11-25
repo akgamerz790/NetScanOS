@@ -18,26 +18,42 @@ namespace WinMap
 
             
             Console.WriteLine("HI");
-            WriteWithPreset("TSETUISEUTKSG&I&^BU^", true);
+            WriteWithPreset((ConsoleColor)FallBackVars.ConsoleColorPresets.ColorPresets.Error, "56", true);
             await GetScan();
         }
 
-        public static void WriteWithPreset(string _text56, bool _appendNewLine)
+        // public static void WriteWithPreset(string _text56, bool _appendNewLine)
+        // {
+        //     FallBackVars.ConsoleColorPresets.ApplyPreset(FallBackVars.ConsoleColorPresets._PRESET_SUCCESS);
+        //     if(_appendNewLine == true)
+        //     {
+        //         Console.WriteLine(_text56);
+        //         // Console.ResetColor();
+        //     }
+        //     else   //ResetColor() not needed when sepcified outBound of IF/ELSE
+        //     {
+        //         Console.Write(_text56);
+        //         // Console.ResetColor();
+        //     }
+        //     Console.ResetColor();
+        // }
+
+        public static void WriteWithPreset(ConsoleColor preset, string text, bool appendNewLine)
         {
-            FallBackVars.ConsoleColorPresets.ApplyPreset(FallBackVars.ConsoleColorPresets._PRESET_SUCCESS);
-            if(_appendNewLine == true)
+            // ApplyPreset expects a tuple (FG, BG) so pass the preset as FG and keep current background
+            VariableSpace.FallBackVars.ConsoleColorPresets.ApplyPreset((preset, Console.BackgroundColor));
+
+            if (appendNewLine)
             {
-                Console.WriteLine(_text56);
-                // Console.ResetColor();
+                Console.WriteLine(text);
             }
-            else   //ResetColor() not needed when sepcified outBound of IF/ELSE
+            else
             {
-                Console.Write(_text56);
-                // Console.ResetColor();
+                Console.Write(text);
             }
             Console.ResetColor();
         }
-        WinMap/Program.cs
+
 
         public static async Task Miscellaneous()
         {

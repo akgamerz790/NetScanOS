@@ -1013,19 +1013,44 @@ namespace VariableSpace
             public static (ConsoleColor FG, ConsoleColor BG) _PRESET_INFO = (ConsoleColor.White, ConsoleColor.Blue);
             public static (ConsoleColor FG, ConsoleColor BG) _PRESET_SUCCESS = (ConsoleColor.Black, ConsoleColor.Green);
 
-            // Additional variables can be added here to reach 500+ total presets and variants
-            // For example, lighter/darker shades, blinking flags, or numeric codes
 
-            // Usage example method to set console colors
             public static void ApplyPreset((ConsoleColor FG, ConsoleColor BG) preset)
             {
                 Console.ForegroundColor = preset.FG;
                 Console.BackgroundColor = preset.BG;
             }
 
-            public static void ThisPreset()
+            public static void ThisPreset(ConsoleColor foregroundColor, ConsoleColor backgroundColor)
             {
-                
+                Console.ForegroundColor = foregroundColor;
+                Console.BackgroundColor = backgroundColor;
+                // ApplyPreset(_PRESET_SUCCESS)
+            }
+
+            public enum ColorPresets
+            {
+                Error,
+                Warning,
+                Info,
+                Success
+            }
+
+            public static class ColorPreseClass
+            {
+                private static readonly Dictionary<ColorPresets, (ConsoleColor FG, ConsoleColor BG)> PresetMap = new()
+                {
+                    [ColorPresets.Error] = (ConsoleColor.White, ConsoleColor.Red),
+                    [ColorPresets.Warning] = (ConsoleColor.Black, ConsoleColor.Yellow),
+                    [ColorPresets.Info] = (ConsoleColor.White, ConsoleColor.Blue),
+                    [ColorPresets.Success] = (ConsoleColor.Black, ConsoleColor.Green),
+                };
+
+                public static void ApplyPreset(ColorPresets preset)
+                {
+                    var colors = PresetMap[preset];
+                    Console.ForegroundColor = colors.FG;
+                    Console.BackgroundColor = colors.BG;
+                }
             }
         }
 
