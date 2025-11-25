@@ -1,0 +1,15 @@
+Unhandled exception. System.Net.NetworkInformation.PingException: An exception occurred during a Ping request.
+ ---> System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at System.Net.NetworkInformation.Ping.GetAddressAndSend(String hostNameOrAddress, Int32 timeout, Byte[] buffer, PingOptions options)
+   --- End of inner exception stack trace ---
+   at System.Net.NetworkInformation.Ping.GetAddressAndSend(String hostNameOrAddress, Int32 timeout, Byte[] buffer, PingOptions options)
+   at System.Net.NetworkInformation.Ping.Send(String hostNameOrAddress, Int32 timeout, Byte[] buffer, PingOptions options)
+   at System.Net.NetworkInformation.Ping.Send(String hostNameOrAddress, Int32 timeout)
+   at WinMapUtils.WinScan.ScanIP(String _ip) in Z:\NetScanOS\WinMap\WinMapUtils\WinScan.cs:line 11
+   at WinMap.WinScan.Main() in Z:\NetScanOS\WinMap\Program.cs:line 14
+   at WinMap.WinScan.<Main>()
+
+
+

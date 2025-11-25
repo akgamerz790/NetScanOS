@@ -1,0 +1,26 @@
+using System;
+using NativeWifi;
+
+public static class WinUtils
+{
+    public static string ConnectionName()
+    {
+        try
+        {
+            var client = new WlanClient();
+            foreach (var interface in client.Interfaces)
+            {
+                if (interface.InterfaceState == Wlan.WlanInterfaceState.Connected)
+                {
+                    string profileName = interface.CurrentConnection.profileName;
+                    return profileName;
+                }
+            }
+            return "Not connected to WiFi";
+        }
+        catch (Exception ex)
+        {
+            return $"Error: {ex.Message}";
+        }
+    }
+}
