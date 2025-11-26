@@ -444,6 +444,8 @@ namespace VariableSpace
         public static string _COREOSLABS_MAIN = "CoreOS Labs";
         public static string _MY_GITHUB_PROFILE = "https://github.com/akgamerz790";
 
+        public static int _THOUSANDINTEGER = 1000;
+
         public class ScanTypes
         {
             // HOST DISCOVERY SCANS
