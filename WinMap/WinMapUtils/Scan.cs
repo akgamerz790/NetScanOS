@@ -7,7 +7,6 @@ namespace WinMapUtils
 {
     public class Scan
     {
-
         public async static Task ScanXYZ(string _ipSend)
         {
             for (var s = 0; s < 256; s++)
