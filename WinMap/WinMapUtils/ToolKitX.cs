@@ -20,9 +20,6 @@ namespace WinMapUtils
             Console.Write(_filler);
             Console.Write(_text2 + WinUtils.GetLocalIPAddress());
             Console.Write("\n" + "\n");
-            // Console.Write("  " + WinUtils.GetAllLocalIPAddresses());
-            // WinUtils.GetAllLocalIPAddresses();
-            // Console.Write(WiFiHelper.GetConnectedWiFiName());
         }
     }
 

@@ -29,3 +29,12 @@ If you discover unauthorized modifications or distributions of this tool:
 
 ## Features
 - Pending
+
+<hr>
+
+# STATUS
+
+**Author**: akgamerz790
+**Organization**: CoreOS Labs
+**License**: Open Source
+**Status**: Active Development.
