@@ -1,5 +1,8 @@
 using System;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
 
 namespace WinMapUtils
 {
@@ -58,9 +61,10 @@ namespace WinMapUtils
         {
             // After ping succeeds
             // if (PingHost(_ip))
-            if(true)
+
+            if(CheckHostStatus.HostStat(_ip, VariableSpace.FallBackVars._THOUSANDINTEGER))
             {
-                Console.WriteLine($"[+] Host {_ip} is up");
+                Console.WriteLine($"     [+] Host {_ip} is up");
                 
                 // Add port scanning here
                 int[] commonPorts = {21, 22, 23, 80, 443, 2121, 8080};
@@ -77,6 +81,24 @@ namespace WinMapUtils
                 #pragma warning disable CS0162 // Unreachable code detected
                     Console.WriteLine($"[-] Host {_ip} is down");
                 #pragma warning restore CS0162 // Unreachable code detected
+            }
+        }
+    }
+
+    public class CheckHostStatus
+    {
+        public static bool g = true;
+        public static bool HostStat(string _ip, int _SPECIFIED_TIMEOUTPING)
+        {
+            Ping ping =  new Ping();
+            PingReply pingReply = ping.Send(_ip, _SPECIFIED_TIMEOUTPING);
+            if (pingReply.Status == IPStatus.Success)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
