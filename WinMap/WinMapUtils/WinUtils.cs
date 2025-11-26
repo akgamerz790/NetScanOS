@@ -34,10 +34,9 @@ namespace WinMapUtils
             string _lineBreakModifier = "\n";
             Console.Write(_lineBreakModifier);
         }
-        public async static Task GetLocalIP()
+        public async static Task<string> GetLocalIP()
         {
-            
-
+            return VariableSpace.FallBackVars._LOCALHOST;
         }
 
         public static string GetLocalIPAddress()
