@@ -22,27 +22,29 @@ namespace WinMap
 
             
             Console.WriteLine("HI");
-            await WriteWithPreset((ConsoleColor)FallBackVars.ConsoleColorPresets.ColorPresets.Error, "56", true);
-            // await Miscellaneous("enderblade.com");
+            await WriteWithPreset(FallBackVars.ConsoleColorPresets.ColorPresets.Error, "56", true);
             
 
             await GetScan();
         }
 
 
-        public async static Task WriteWithPreset(ConsoleColor preset, string text, bool appendNewLine)
+        public static async Task WriteWithPreset(VariableSpace.FallBackVars.ConsoleColorPresets.ColorPresets preset, string _text121, bool _appendNewLine39 = true)
         {
-            // ApplyPreset expects a tuple (FG, BG) so pass the preset as FG and keep current background
-            VariableSpace.FallBackVars.ConsoleColorPresets.ApplyPreset((preset, Console.BackgroundColor));
+            // Apply the color preset
+            VariableSpace.FallBackVars.ConsoleColorPresets.ColorPresetManager.ApplyPreset(preset);
 
-            if (appendNewLine)
+            // Write the text
+            if (_appendNewLine39)
             {
-                Console.WriteLine(text);
+                Console.WriteLine(_text121);
             }
             else
             {
-                Console.Write(text);
+                Console.Write(_text121);
             }
+            
+            // Reset colors
             Console.ResetColor();
         }
 
@@ -65,9 +67,26 @@ namespace WinMap
                 }
             }
         }
+        public static async Task ScanSHIT()
+        {
+            Console.Write("[!] Enter IP to check: ");
+            string? _ipToCheck = Console.ReadLine();
+                #pragma warning disable CS8604 // Possible null reference argument.
+            string? _IPSUBNET = IPEncoder.GetSubnetBase(_ipToCheck);
+                #pragma warning restore CS8604 // Possible null reference argument.
+            Console.WriteLine("[!] IP Subnet: " +_IPSUBNET);
+
+
+            // int? _portToCheck = Console.ReadLine();
+            Console.Write("[!] Enter Port to check: ");
+            int _portToCheck = Convert.ToInt32(Console.ReadLine());
+            #pragma warning disable CS8604
+            await TextUtils.TextStyler(_ipToCheck, FallBackVars.ScanTypes._ARP_SCAN, 67, _portToCheck);
+            await WinMapUtils.WinScan.ScanIP(_ipToCheck, _portToCheck, 9);
+            // await GetScan(); //Not needed  [ADDED NEW SCAN HANDLING]
+        }
 
         public static async Task GetScan(){
-            // Console.Read
             Console.Write("[!] Enter IP to check: ");
             string? _ipToCheck = Console.ReadLine();
                 #pragma warning disable CS8604 // Possible null reference argument.
